@@ -1,0 +1,171 @@
+/* resets */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*Loader Begin*/
+
+.loader-bg {
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(40vh - 45px);
+    left: calc(100vh - 55px);
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    border: 1em solid #1ABC9C;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loader {
+        border: 0 solid transparent;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        right: calc(50vh - 55px);
+        left: calc(40vh - 80px);
+    }
+}
+
+
+/*Loader End*/
+
+
+/* main */
+
+header {
+    height: 360px;
+    z-index: 10;
+}
+
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: Ubuntu;
+}
+
+.header-banner {
+    background-color: #333;
+    background-image: url('../img/london.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+
+/* demo content */
+
+body {
+    color: #292f36;
+    font-family: Ubuntu;
+    line-height: 1.6;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: 960px;
+    max-width: 100%;
+}
+
+.content h2 {
+    color: #292f36;
+    font-family: Ubuntu;
+}
+
+.content h5 {
+    color: #292f36;
+    font-family: Ubuntu;
+    font-weight: bold;
+}
+
+article {
+    float: left;
+    width: 720px;
+}
+
+article p:first-of-type {
+    margin-top: 0;
+}
+
+article h2:first-of-type {
+    margin-top: 0;
+    font-family: Ubuntu;
+    font-style: normal;
+}
+
+aside {
+    float: right;
+    width: 120px;
+}
+
+p img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+    .content {
+        padding: 4rem 0;
+    }
+    article {
+        float: none;
+        margin: 0 auto;
+        width: 96%;
+    }
+    article:last-of-type {
+        margin-bottom: 3rem;
+    }
+    aside {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
